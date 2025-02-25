@@ -248,53 +248,6 @@ je conçois des expériences numériques fluides et immersives.
 <!--  section formulaire  -->
 <section id="contact" class="container formulaire-de-contact my-5">
 <h2 class="text-center my-5">Me contacter</h2>
-<!-- MESSAGES D'ERREURS -->
-<?php if (isset($_SESSION['monapp']['errors'])): ?>
-    <div class="alert-errors">
-        <?php echo implode('<br>', array_map('htmlspecialchars', $_SESSION['monapp']['errors'])); ?>
-    </div>
-<?php endif; ?>
-<!-- FIN MESSAGES D'ERREURS -->
-
-<!-- MESSAGE DE SUCCES -->
-<?php if (isset($_SESSION['monapp']['success'])): ?>
-    <div class="alert-success text-center">
-        Votre message a bien été envoyé !
-    </div>
-<?php endif; ?>
-<!-- FIN MESSAGE DE SUCCES -->
-
-<!-- FORMULAIRE DE CONTACT -->
-<div class="row justify-content-center align-items-center">
-    <form action="send.php" method="POST" class="col-12 col-md-8">
-        <h3 class="mb-5">Contact</h3>
-        <div class="form-group">
-            <input class="inptform" type="text" id="name" name="name" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['name']) ? $_SESSION['monapp']['data_memory']['name'] : ''); ?>" required>
-            <label class="lblform" for="name">Nom*</label>
-        </div>
-        <div class="form-group">
-            <input class="inptform" type="email" id="email" name="email" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['email']) ? $_SESSION['monapp']['data_memory']['email'] : ''); ?>" required>
-            <label class="lblform" for="email">Email*</label>
-        </div>
-        <div class="form-group">
-            <input class="inptform" type="text" id="object" name="object" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['object']) ? $_SESSION['monapp']['data_memory']['object'] : ''); ?>" required>
-            <label class="lblform" for="object">Objet*</label>
-        </div>
-        <div class="form-group">
-            <textarea class="inptform" id="message" name="message" rows="10" cols="10" required><?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['message']) ? $_SESSION['monapp']['data_memory']['message'] : ''); ?></textarea>
-            <label class="lblform" for="message">Message</label>
-        </div>
-        <div class="mt-4">
-            <button type="submit" class="bouton bouton_primary">Envoyer</button>
-        </div>
-    </form>
-</div>
 <!-- FIN FORMULAIRE DE CONTACT -->
 </section>
 </main>
-<?php
-unset($_SESSION['monapp']['data_memory']);
-unset($_SESSION['monapp']['errors']);
-unset($_SESSION['monapp']['success']);
-?>
-<?php include 'includes/footer.php'; ?>
