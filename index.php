@@ -1,0 +1,303 @@
+<?php
+session_start();
+?>
+<?php include 'includes/header.php'; ?>
+
+<main class="container">
+<!--  section présentation  -->
+<section class="presentation next-section row justify-content-center align-items-center mt-md-5">
+<!-- Photo de profil -->
+<div class="col-12 col-md-4 my-4 my-md-0 text-center">
+<img class="img-fluid profil-img" src="assets/img/profil.png" alt="Jessica Deplanche">
+</div>
+
+<!-- Texte & Infos -->
+<div class="col-12 col-md-8 c_blanc">
+<h2 class="mb-4">À propos de moi</h2>
+<p class="intro-text">
+Passionnée par le design et la créativité, j’ai transformé ma carrière après 10 ans dans l’industrie de la beauté pour devenir 
+Conceptrice UI Designer. Mon approche allie esthétique et fonctionnalité, avec une attention particulière portée à 
+l’expérience utilisateur.
+</p>
+<p class="about-text">
+Mes voyages ont nourri ma curiosité et mon empathie, des qualités essentielles pour imaginer des interfaces 
+intuitives et engageantes. Aujourd’hui, grâce à mes compétences en WordPress, HubSpot, HTML/CSS/JS, la suite Adobe & Figma, 
+je conçois des expériences numériques fluides et immersives.
+</p>
+<p class="mission-text">
+<i class="fa-solid fa-bullseye c_rose"></i> Mon objectif : Créer des designs qui établissent une connexion intuitive entre l’utilisateur et le digital, en conjuguant 
+élégance et simplicité.
+</p>
+<!-- Icônes Tech Stack -->
+<div class="tech-stack d-flex flex-wrap mt-4">
+<i class="fa-brands fa-figma me-3"></i>
+<i class="fa-brands fa-html5 me-3"></i>
+<i class="fa-brands fa-css3-alt me-3"></i>
+<i class="fa-brands fa-js me-3"></i>
+<i class="fa-brands fa-php me-3"></i>
+<i class="fa-brands fa-wordpress me-3"></i>
+<i class="fa-brands fa-hubspot"></i>
+</div>
+
+<!-- Bouton CV -->
+<div class="mt-4">
+<a class="bouton" href="assets/jessica_deplanche-CV.pdf" download="jessica_deplanche-CV.pdf">
+  <button class="bouton_primary"><i class="fa-solid fa-upload c_boutton"></i> Télécharger mon CV</button>
+</a>
+</div>
+</div>
+
+</section>
+<!--  section mon expertise & diplome et certification  -->
+<section id="parcours" class="container my-5 pt-md-5">
+<h2 class="text-center mb-5">Mon parcours</h2>
+<div class="timeline position-relative">
+<div class="timeline-block timeline-block-left">
+<div class="marker"></div>
+<div class="timeline-content">
+    <h3 class="title4">Intégratrice web & UI Designer</h3>
+    <span class="c_rose">Juin 2022 - Aujourd'hui | Montpellier</span>
+    <p>Actuellement en poste chez Mon Chasseur Immo, où je combine mes compétences en intégration web et en design pour créer des interfaces utilisateurs intuitives et esthétiques</p>
+</div>
+</div>
+<div class="timeline-block timeline-block-right">
+<div class="marker"></div>
+<div class="timeline-content">
+    <h3 class="title4">Web Designer</h3>
+    <span class="c_rose">Février 2022 - Mars 2022 | Montpellier</span>
+    <p>Stage en tant que Web Designer chez Teads, où j'ai appris à concevoir des sites web interactifs tout en respectant l'identité visuelle et les besoins du client</p>
+</div>
+</div>
+<div class="timeline-block timeline-block-left">
+<div class="marker"></div>
+<div class="timeline-content">
+    <h3 class="title4">Graphic Designer</h3>
+    <span class="c_rose">Janvier 2021 - Février 2021 | Montpellier</span>
+    <p>J'ai travaillé en tant que Graphic Designer pendant deux mois, en me concentrant sur la création d'éléments visuels attractifs et cohérents pour des projets variés</p>
+</div>
+</div>
+<div class="timeline-block timeline-block-right">
+<div class="marker"></div>
+<div class="timeline-content">
+    <h3 class="title4">Assistante de direction - Institut</h3>
+    <span class="c_rose">Juin 2015 - Juin 2019 | Canada</span>
+    <p>En tant qu'assistante de direction dans un institut esthétique, j'ai développé des compétences organisationnelles et de gestion, tout en étant impliquée dans les activités administratives de l'entreprise</p>
+</div>
+</div>
+<div class="timeline-block timeline-block-left">
+<div class="marker"></div>
+<div class="timeline-content">
+    <h3 class="title4">Assistante de direction - Institut</h3>
+    <span class="c_rose">Juin 2015 - Juin 2019 | Bordeaux</span>
+    <p>J'ai assumé des fonctions administratives et de gestion dans un institut de beauté, contribuant à l'organisation et au bon déroulement des activités quotidiennes</p>
+</div>
+</div>
+</div>
+<!-- Diplômes -->
+<div class="timeline-footer pt-5 mt-5">
+    <h2 class="mb-5 text-center">
+      Mes Diplômes
+    </h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="diploma-card">
+                    <h4>Bac+2 Web Designer</h4>
+                    <p>Diplôme en conception web</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="diploma-card">
+                    <h4>Certifications</h4>
+                    <p>Wordpress, Méthode Agile et Opquast</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="diploma-card">
+                    <h4>Bac Pro et CAP</h4>
+                    <p>Esthétique-Cosmétique</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<!--  section mes projets  -->
+
+<section class="container pb-5">
+<h2 class="text-center pb-5">Mes projets</h2>
+<div class="row box justify-content-start align-items-start g-4">
+  <h3 class="my-3">Les créations de <span class="c_rose">sites internet</span></h3>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Mon Chasseur Immo</span>
+    <img src="assets/img/site_prestige.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site prestige</h5>
+      <p class="card-text">J'ai conçu et développé le site Prestige Mon Chasseur Immo, une plateforme dédiée à l'immobilier haut de gamme. Ce projet se distingue par son design élégant et raffiné, offrant une expérience utilisateur fluide et intuitive. Le site met en avant des propriétés exclusives et propose des fonctionnalités avancées pour faciliter la recherche et l'acquisition de biens immobiliers de prestige. Mon objectif était de créer un espace en ligne qui reflète le luxe et l'excellence, tout en répondant aux attentes des clients les plus exigeants.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://prestige.monchasseurimmo.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Mon Chasseur Immo</span>
+    <img src="assets/img/site_recrutement.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site recrutement Mon Chasseur Immo</h5>
+      <p class="card-text">J'ai conçu et développé le nouveau site de recrutement pour Mon Chasseur Immo, une plateforme dédiée à l'immobilier. Ce projet met en avant un design moderne et une expérience utilisateur intuitive, permettant aux candidats de naviguer facilement et de découvrir les opportunités de carrière disponibles. Mon objectif était de créer un espace où les talents peuvent aisément postuler, tout en reflétant les valeurs et l'identité de notre marque.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://www.monchasseurimmo.recrutement.com" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Mon Chasseur Immo</span>
+    <img src="assets/img/site_mci.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site Mon Chasseur Immo</h5>
+      <p class="card-text">J'ai entièrement redesigné le site Mon Chasseur Immo, une plateforme dédiée à l'immobilier. Ce projet met en avant un design moderne et une expérience utilisateur optimisée, permettant aux visiteurs de naviguer facilement et de découvrir les services offerts. Mon objectif était de créer un espace attrayant et fonctionnel, reflétant les valeurs et l'identité de notre marque, tout en améliorant l'accessibilité et l'engagement des utilisateurs.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://www.monchasseurimmo.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Mon Chasseur Immo</span>
+    <img src="assets/img/site_acadimmo.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site acadimmo</h5>
+      <p class="card-text">J'ai créé le site Acadimmo, une plateforme dédiée à la formation dans le domaine de l'immobilier. Ce projet se distingue par son design moderne et son expérience utilisateur intuitive, permettant aux apprenants de naviguer facilement et de découvrir les formations disponibles. Mon objectif était de créer un espace éducatif attrayant et fonctionnel, reflétant les valeurs et l'identité de notre marque, tout en favorisant l'accessibilité et l'engagement des utilisateurs.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://www.acadimmo.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Mon Chasseur Immo</span>
+    <img src="assets/img/site_playbook.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site playbook - interne mci</h5>
+      <p class="card-text">J'ai développé la plateforme Site Playbook - Interne MCI, un outil interne dédié aux chasseurs de notre réseau. Ce projet centralise toutes les informations essentielles pour exercer le métier de chasseur immobilier, regroupant documents et ressources utiles pour réussir. Mon objectif était de créer un espace fonctionnel et accessible, facilitant l'accès aux connaissances nécessaires et améliorant l'efficacité des chasseurs au sein de notre réseau.</p>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Projet étude</span>
+    <img src="assets/img/site_multiservices.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site steph multi-services</h5>
+      <p class="card-text">J'ai créé le site Steph Multi-Services, une landing page conçue lors de ma formation en web design. Ce projet met en avant les services d'un artisan polyvalent, offrant une vitrine attrayante et fonctionnelle pour présenter son travail. Mon objectif était de créer un espace en ligne qui facilite la vente de ses services et permet aux clients potentiels de le contacter facilement, tout en reflétant le professionnalisme et la diversité des compétences de l'artisan.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://www.steph-multiservices.etudiants3w.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Projet étude</span>
+    <img src="assets/img/site_bulledebeaute.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site bulle de beauté</h5>
+      <p class="card-text">J'ai créé le site Bulle de Beauté dans le cadre de ma certification WordPress. Ce projet représente un institut de beauté et vise à promouvoir ses services, faciliter la prise de rendez-vous en ligne et optimiser la prise de contact avec les clients. Mon objectif était de créer une plateforme attrayante et fonctionnelle, reflétant le professionnalisme de l'institut tout en offrant une expérience utilisateur agréable et intuitive.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://bulledebeaute.etudiants3w.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-4">
+  <div class="card content position-relative">
+  <span class="badge bg_lightblue c_bleu position-absolute top-0 start-0">Projet étude</span>
+    <img src="assets/img/site_clashcroute.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Site clash croûte</h5>
+      <p class="card-text">Dans le cadre de ma formation, j'ai collaboré avec une équipe pour développer Clash Croûte, un jeu en ligne. Ce projet comprenait la création de la charte graphique, des dessins des cartes, la conception du jeu et de sa boîte. Pour ma part, j'ai créé le site internet dans sa globalité en utilisant WordPress et le thème Divi, offrant une plateforme attrayante et fonctionnelle pour présenter le jeu et attirer les joueurs.</p>
+      <div class="mt-4">
+        <a class="bouton_secondary" href="https://clashcroute.etudiants3w.com/" target="_blank">
+          Voir le site <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<h3 class="my-5">Les <span class="c_rose">maquettes</span></h3>
+</section>
+<!--  section formulaire  -->
+<section id="contact" class="container formulaire-de-contact my-5">
+<h2 class="text-center my-5">Me contacter</h2>
+<!-- MESSAGES D'ERREURS -->
+<?php if (isset($_SESSION['monapp']['errors'])): ?>
+    <div class="alert-errors">
+        <?php echo implode('<br>', array_map('htmlspecialchars', $_SESSION['monapp']['errors'])); ?>
+    </div>
+<?php endif; ?>
+<!-- FIN MESSAGES D'ERREURS -->
+
+<!-- MESSAGE DE SUCCES -->
+<?php if (isset($_SESSION['monapp']['success'])): ?>
+    <div class="alert-success text-center">
+        Votre message a bien été envoyé !
+    </div>
+<?php endif; ?>
+<!-- FIN MESSAGE DE SUCCES -->
+
+<!-- FORMULAIRE DE CONTACT -->
+<div class="row justify-content-center align-items-center">
+    <form action="send.php" method="POST" class="col-12 col-md-8">
+        <h3 class="mb-5">Contact</h3>
+        <div class="form-group">
+            <input class="inptform" type="text" id="name" name="name" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['name']) ? $_SESSION['monapp']['data_memory']['name'] : ''); ?>" required>
+            <label class="lblform" for="name">Nom*</label>
+        </div>
+        <div class="form-group">
+            <input class="inptform" type="email" id="email" name="email" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['email']) ? $_SESSION['monapp']['data_memory']['email'] : ''); ?>" required>
+            <label class="lblform" for="email">Email*</label>
+        </div>
+        <div class="form-group">
+            <input class="inptform" type="text" id="object" name="object" value="<?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['object']) ? $_SESSION['monapp']['data_memory']['object'] : ''); ?>" required>
+            <label class="lblform" for="object">Objet*</label>
+        </div>
+        <div class="form-group">
+            <textarea class="inptform" id="message" name="message" rows="10" cols="10" required><?php echo htmlspecialchars(isset($_SESSION['monapp']['data_memory']['message']) ? $_SESSION['monapp']['data_memory']['message'] : ''); ?></textarea>
+            <label class="lblform" for="message">Message</label>
+        </div>
+        <div class="mt-4">
+            <button type="submit" class="bouton bouton_primary">Envoyer</button>
+        </div>
+    </form>
+</div>
+<!-- FIN FORMULAIRE DE CONTACT -->
+</section>
+</main>
+<?php
+unset($_SESSION['monapp']['data_memory']);
+unset($_SESSION['monapp']['errors']);
+unset($_SESSION['monapp']['success']);
+?>
+<?php include 'includes/footer.php'; ?>

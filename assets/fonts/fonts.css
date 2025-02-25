@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "comfortaa";
+  src: url("../fonts/Comfortaa-VariableFont_wght.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "amsterdam";
+  src: url("../fonts/Amsterdam.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gilroy";
+  src: url("../fonts/Gilroy-Regular.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.otf") format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-MediumItalic.otf") format('otf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-SemiBold.otf") format('otf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-SemiBoldItalic.otf") format('otf');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-Bold.otf") format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-BoldItalic.otf") format('otf');
+  font-weight: bold;
+  font-style: italic;
+}
