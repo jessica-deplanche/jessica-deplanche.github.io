@@ -67,10 +67,9 @@ background-color: var(--color-blanc);
 
 /* Anchor Links */
 a {
-text-decoration: none;
-color: var(--color-blanc);
+text-decoration: none!important;
+color: var(--color-vert)!important;
 text-align: center;
-text-decoration: none;
 }
 
 a:hover {
