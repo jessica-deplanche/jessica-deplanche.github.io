@@ -535,7 +535,35 @@ je conçois des expériences numériques fluides et immersives.
 <!--  section formulaire  -->
 <section id="contact" class="container formulaire-de-contact my-5">
 <h2 class="text-center my-5">Me contacter</h2>
-<!-- FIN FORMULAIRE DE CONTACT -->
+<!-- modify this form HTML and place wherever you want your form -->
+<div class="row justify-content-center align-items-center">
+<form
+  action="https://formspree.io/f/xpwqgeko"
+  class="fs-form col-12 col-md-8"
+  target="_top"
+  method="POST"
+>
+        <div class="form-group">
+            <input class="inptform" type="text" id="name" name="name" value="" required>
+            <label class="lblform" for="name">Nom*</label>
+        </div>
+        <div class="form-group">
+            <input class="inptform" type="email" id="email" name="email" value="" required>
+            <label class="lblform" for="email">Email*</label>
+        </div>
+        <div class="form-group">
+            <input class="inptform" type="text" id="object" name="object" value="" required>
+            <label class="lblform" for="object">Objet*</label>
+        </div>
+        <div class="form-group">
+            <textarea class="inptform" id="message" name="message" rows="10" cols="10" required></textarea>
+            <label class="lblform" for="message">Message</label>
+        </div>
+        <div class="mt-4">
+            <button type="submit" class="bouton bouton_primary">Envoyer</button>
+        </div>
+</form>
+</div>
 </section>
 </main>
 <!--  section footer   -->

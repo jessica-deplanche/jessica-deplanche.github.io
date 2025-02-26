@@ -474,88 +474,83 @@ padding: 30px;
 color: var(--color-blanc);
 text-decoration: none;
 }
+
 /* section contact */
 
 .form-group {
-position: relative;
-margin-bottom: 25px;
-}
-input{
-font-size: 13px;
-padding: 10px 10px 10px 5px;
-display: block;
-width: 100%;
-border: none;
-outline: none;
-border-bottom: 1px solid #B1B1B1;
-color: var(--color-blanc) ;
-background: rgba(0,0,0,0);
-opacity: 0.5;
-transition: all 0.2s ease;
-}
-textarea {
-font-size: 13px;
-padding: 10px 10px 10px 5px;
-display: block;
-width: 100%;
-border: none;
-outline: none;
-border-bottom: 1px solid #B1B1B1;
-color: var(--color-blanc) ;
-background: rgba(0,0,0,0);
-opacity: 0.5;
-transition: all 0.2s ease;
-}
-input:focus , textarea:focus{
-outline: none;
-opacity: 1;
-}
-label {
-color: var(--color-blanc);
-font-size: 13px;
-font-weight: normal;
-position: absolute;
-/*pointer-events: none;*/
-left: 5px;
-top: 15px;
-opacity: 0.5;
-transition: all 0.2s ease ;
--moz-transition: all 0.2s ease;
--webkit-transition: all 0.2s ease;
-}
-input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label
-{
-top: -10px;
-font-size: 12px;
-color: #B1B1B1;
-opacity: 1;
-}
-.alert-errors{
-width: 40%;
-margin: 15px auto;
-padding: 15px;
-color: var(--color-blanc);
-background-color: var(--color-rose);
-}
-.alert-success{
-width: 40%;
-margin: 15px auto;
-padding: 15px;
-color: var(--color-blanc);
-background-color: var(--color-vert);
-border-radius: 8px;
-}
-.debug{
-padding: 15px;
-background-color: #eee;
-}
-/*--------------section genially------------------------------ */
-.genially{
-width: 70%;
-margin: 0 auto;
-padding: 10px;
-border: 4px solid #C196BD;
-}
+    position: relative;
+    margin-bottom: 25px;
+    }
+    input{
+    font-size: 13px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #B1B1B1;
+    color: var(--color-blanc) ;
+    background: rgba(0,0,0,0);
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    }
+    textarea {
+    font-size: 13px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #B1B1B1;
+    color: var(--color-blanc) ;
+    background: rgba(0,0,0,0);
+    opacity: 0.5;
+    transition: all 0.2s ease;
+    }
+    input:focus , textarea:focus{
+    outline: none;
+    opacity: 1;
+    }
+    label {
+    color: var(--color-blanc);
+    font-size: 13px;
+    font-weight: normal;
+    position: absolute;
+    /*pointer-events: none;*/
+    left: 5px;
+    top: 15px;
+    opacity: 0.5;
+    transition: all 0.2s ease ;
+    -moz-transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    }
+    input:focus ~ label, input:valid ~ label, textarea:focus ~ label, textarea:valid ~ label
+    {
+    top: -10px;
+    font-size: 12px;
+    color: #B1B1B1;
+    opacity: 1;
+    }
+    .alert-errors{
+    width: 40%;
+    margin: 15px auto;
+    padding: 15px;
+    color: var(--color-blanc);
+    background-color: var(--color-rose);
+    }
+    .alert-success{
+    width: 40%;
+    margin: 15px auto;
+    padding: 15px;
+    color: var(--color-blanc);
+    background-color: var(--color-vert);
+    border-radius: 8px;
+    }
+    .debug{
+    padding: 15px;
+    background-color: #eee;
+    }
+
 /*--------------section menu------------------------------ */
 
 /* .menu .animation {
