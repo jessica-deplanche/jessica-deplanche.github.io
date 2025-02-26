@@ -402,12 +402,12 @@ font-size: 1rem;
 
 /* section maquettes */
  /* La carte avec image de fond et effet zoom au hover */
- .card{
+ .card_img{
     border-radius: 58px !important;
     height: 250px;
     overflow: hidden;
  }
- .card .card-bg {
+ .card_img .card-bg {
     position: relative;
     height: 200px;
     background-position: 50%;
