@@ -321,8 +321,65 @@ je conçois des expériences numériques fluides et immersives.
 </div>
 </div>
 </div>
-<h3 class="my-5">Les <span class="c_rose">maquettes</span></h3>
+
+<!--  section mes maquettes  -->
+
+<div class="container mt-5">
+  <h3 class="my-5">Les <span class="c_rose">maquettes</span></h3>
+  <!-- Carte cliquable -->
+  <div class="card bg-dark text-white">
+    <div class="card-bg" data-bs-toggle="modal" data-bs-target="#sliderModal" style="background-image: url('site_recrutement.png');">
+      <!-- On peut inclure une image cachée pour l’accessibilité si besoin -->
+      <img src="site_recrutement.png" alt="Image de fond" class="d-none">
+      <div class="card-text-overlay">Maquette Recrutement</div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale avec le slider -->
+<div class="modal fade" id="sliderModal" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sliderModalLabel">Détails de la Maquette</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Carousel Bootstrap -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Première slide active -->
+            <div class="carousel-item active">
+              <img src="image1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="image2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="image3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+          </div>
+          <!-- Contrôles du carousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/tHAdZ3RLgmv1hhScDehEla/Acadimmo?page-id=74%3A117&node-id=2013-1616&starting-point-node-id=2013%3A1616&embed-host=share" allowfullscreen></iframe>
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/QzrBptSNYKoaxbTol0JQq0/MCI-recrutement?page-id=830%3A4684&node-id=830-5275&p=f&viewport=3011%2C1473%2C0.06&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=830%3A5275&embed-host=share" allowfullscreen></iframe>
 </section>
 <!--  section formulaire  -->
 <section id="contact" class="container formulaire-de-contact my-5">

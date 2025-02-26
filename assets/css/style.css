@@ -399,6 +399,51 @@ color: var(--color-rose);
 font-size: 1rem;
 }
 
+
+/* section maquettes */
+ /* La carte avec image de fond et effet zoom au hover */
+ .card-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  /* Overlay dégradé */
+  .card-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  .card-bg:hover::before {
+    opacity: 0.5;
+  }
+  /* L'image en arrière-plan qui zoom */
+  .card-bg img {
+    transition: transform 0.5s ease;
+  }
+  .card-bg:hover img {
+    transform: scale(1.1);
+  }
+  /* Texte placé par-dessus l'image */
+  .card-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+
 /* section footer */
 .about, 
 .reseaux-sociaux{
