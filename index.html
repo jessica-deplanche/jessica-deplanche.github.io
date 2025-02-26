@@ -345,20 +345,76 @@ je conçois des expériences numériques fluides et immersives.
       </div>
     </div>
   </div>
+  <div class="col-12 col-md-4">
+    <div class="card_img bg-dark text-white">
+      <div class="card-bg" data-bs-toggle="modal" data-bs-target="#sliderModal_acadimmo" style="background-image: url('assets/img/site_acadimmo.jpg');">
+        <!-- On peut inclure une image cachée pour l’accessibilité si besoin -->
+        <img src="assets/img/site_acadimmo.jpg" alt="Image de fond" class="d-none">
+        <div class="card-text-overlay">Maquette Acadimmo</div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 
-<!-- Modale avec le slider -->
+<!-- Modale avec le slider maquette prestige -->
+<div class="modal fade" id="sliderModal_prestige" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sliderModalLabel">Détails de la Maquette prestige</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Carousel Bootstrap -->
+        <div id="carouselprestige" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <!-- Première slide active -->
+            <div class="carousel-item active">
+              <img src="assets/img/maquette_prestige/MCI-Prestige-Home.png" class="d-block w-100" alt="Slide 1">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_prestige/MCI-Prestige-Services.png" class="d-block w-100" alt="Slide 2">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_prestige/MCI-Prestige-partenaire.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_prestige/MCI-Prestige-Equipe.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_prestige/MCI-Prestige-Chasseur.png" class="d-block w-100" alt="Slide 3">
+            </div>
+          </div>
+          <!-- Contrôles du carousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselprestige" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselprestige" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+<!-- Modale avec le slider maquette recrutement -->
 <div class="modal fade" id="sliderModal_recrutement" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg modal-dialog-centered">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title" id="sliderModalLabel">Détails de la Maquette</h5>
+      <h5 class="modal-title" id="sliderModalLabel">Détails de la Maquette recrutement</h5>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
     </div>
     <div class="modal-body">
       <!-- Carousel Bootstrap -->
-      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div id="carouselrecrutement" class="carousel slide" data-bs-interval="false">
         <div class="carousel-inner">
           <!-- Première slide active -->
           <div class="carousel-item active">
@@ -398,11 +454,11 @@ je conçois des expériences numériques fluides et immersives.
           </div>
         </div>
         <!-- Contrôles du carousel -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselrecrutement" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Précédent</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselrecrutement" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Suivant</span>
         </button>
@@ -411,6 +467,70 @@ je conçois des expériences numériques fluides et immersives.
   </div>
 </div>
 </div>
+
+<!-- Modale avec le slider maquette acadimmo -->
+<div class="modal fade" id="sliderModal_acadimmo" tabindex="-1" aria-labelledby="sliderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sliderModalLabel">Détails de la Maquette recrutement</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Carousel Bootstrap -->
+        <div id="carouselacadimmo" class="carousel slide" data-bs-interval="false">
+          <div class="carousel-inner">
+            <!-- Première slide active -->
+            <div class="carousel-item active">
+              <img src="assets/img/maquette_acadimmo/Ac - Homepage.png" class="d-block w-100" alt="Slide 1">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Nos formations (page HUB).png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Formation page de detaille.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Actualité.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Actualité - Post.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Qui sommes-nous.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Formateurs.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac-popUp_formateur.png" class="d-block w-100" alt="Slide 3">
+            </div>
+            <!-- Slide suivante -->
+            <div class="carousel-item">
+              <img src="assets/img/maquette_acadimmo/Ac - Contact.png" class="d-block w-100" alt="Slide 2">
+            </div>
+          </div>
+          <!-- Contrôles du carousel -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselacadimmo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselacadimmo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
 </section>
 <!--  section formulaire  -->
 <section id="contact" class="container formulaire-de-contact my-5">
