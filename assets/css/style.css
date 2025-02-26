@@ -488,7 +488,7 @@ text-decoration: none;
     width: 100%;
     border: none;
     outline: none;
-    border-bottom: 1px solid #B1B1B1;
+    border-bottom: 1px solid var(--color-button);
     color: var(--color-blanc) ;
     background: rgba(0,0,0,0);
     opacity: 0.5;
@@ -499,9 +499,10 @@ text-decoration: none;
     padding: 10px 10px 10px 5px;
     display: block;
     width: 100%;
+    height: 120px;
     border: none;
     outline: none;
-    border-bottom: 1px solid #B1B1B1;
+    border-bottom: 1px solid var(--color-button);
     color: var(--color-blanc) ;
     background: rgba(0,0,0,0);
     opacity: 0.5;
@@ -528,7 +529,7 @@ text-decoration: none;
     {
     top: -10px;
     font-size: 12px;
-    color: #B1B1B1;
+    color: var(--color-button);
     opacity: 1;
     }
     .alert-errors{
