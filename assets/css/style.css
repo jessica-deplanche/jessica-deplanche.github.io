@@ -269,7 +269,7 @@ backdrop-filter: blur(150px);
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 border-radius: 8px;
 z-index: 1;
-transform: 0.5s;
+transition: transform 0.5s ease;
 color: #fff;
 }
 
@@ -381,7 +381,8 @@ border: 1px solid var(--color-button);
 border-radius: 8px;
 padding: 20px;
 margin-bottom: 20px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+transition: transform 0.3s ease, 
+box-shadow 0.3s ease;
 }
 
 .diploma-card:hover {
@@ -398,7 +399,6 @@ color: var(--color-rose);
 .diploma-card p {
 font-size: 1rem;
 }
-
 
 /* section maquettes */
  /* La carte avec image de fond et effet zoom au hover */
