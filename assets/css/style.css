@@ -28,6 +28,11 @@ background-color: var(--color-bleu)!important;
 line-height: 1.2;
 }
 
+.profil-img{
+width: 300px;
+height: 300px;
+}
+
 
 .linkedin {
 height: 20px;
