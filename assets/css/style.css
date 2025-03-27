@@ -139,6 +139,9 @@ font-weight: 600;
 line-height: 22px;
 }
 
+p {
+  font-weight: 400;
+}
 /* boutons */
 
 .bouton_primary{
