@@ -6,13 +6,6 @@
 }
 
 @font-face {
-  font-family: "amsterdam";
-  src: url("../fonts/Amsterdam.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "gilroy";
   src: url("../fonts/Gilroy-Regular.otf") format("otf");
   font-weight: normal;
