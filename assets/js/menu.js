@@ -22,5 +22,25 @@ document.addEventListener("DOMContentLoaded", function () {
         hoverBar.style.width = "0";
       });
     }
+
+    // Bouton flottant Retour en haut
+    const backToTopBtn = document.getElementById("backToTopBtn");
+    if (backToTopBtn) {
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 320) {
+          backToTopBtn.classList.add("visible");
+        } else {
+          backToTopBtn.classList.remove("visible");
+        }
+      }, { passive: true });
+
+      backToTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
   });
   

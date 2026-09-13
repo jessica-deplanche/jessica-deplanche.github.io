@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 960" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Filtres de flou ambiant pour les lueurs lumineuses -->
+    <filter id="glow-ambient" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="90" result="blur" />
+    </filter>
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="50" result="blur" />
+    </filter>
+    <filter id="glass-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Dégradé de fond principal en bleu pétrole première charte #002f39 -->
+    <linearGradient id="bg-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00141a" />
+      <stop offset="35%" stop-color="#002027" />
+      <stop offset="70%" stop-color="#002832" />
+      <stop offset="100%" stop-color="#002f39" />
+    </linearGradient>
+
+    <!-- Dégradés des lueurs de la première charte (#2DD4BF, #ffb1ef, #38BDF8) -->
+    <radialGradient id="radial-mint" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.65" />
+      <stop offset="55%" stop-color="#2DD4BF" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radial-pink" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffb1ef" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#ffb1ef" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#ffb1ef" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="radial-sky" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.6" />
+      <stop offset="55%" stop-color="#38BDF8" stop-opacity="0.16" />
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Dégradé pour cartes UI glassmorphism -->
+    <linearGradient id="card-glass-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00252e" stop-opacity="0.75" />
+    </linearGradient>
+
+    <linearGradient id="card-glass-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb1ef" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#00252e" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Motif de grille design & intégration -->
+    <pattern id="grid-pattern" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#2DD4BF" stroke-opacity="0.04" stroke-width="1" />
+      <circle cx="0" cy="0" r="1" fill="#2DD4BF" fill-opacity="0.12" />
+    </pattern>
+
+    <!-- Motif de points Figma -->
+    <pattern id="dot-matrix" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="0.8" fill="#38BDF8" fill-opacity="0.1" />
+    </pattern>
+  </defs>
+
+  <!-- Fond de base -->
+  <rect width="100%" height="100%" fill="url(#bg-base)" />
+
+  <!-- Grille technique et points Figma -->
+  <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+  <rect x="1100" y="80" width="700" height="400" fill="url(#dot-matrix)" opacity="0.7" />
+  <rect x="80" y="450" width="450" height="350" fill="url(#dot-matrix)" opacity="0.5" />
+
+  <!-- Lueurs ambiantes géantes (Harmonie #2DD4BF, #ffb1ef, #38BDF8) -->
+  <!-- 1. Halo supérieur droit : Mint & Sky Blue -->
+  <circle cx="1550" cy="200" r="380" fill="url(#radial-mint)" filter="url(#glow-ambient)" />
+  <circle cx="1680" cy="140" r="260" fill="url(#radial-sky)" filter="url(#glow-soft)" />
+
+  <!-- 2. Halo supérieur gauche : Rose poudré néon #ffb1ef -->
+  <circle cx="280" cy="160" r="330" fill="url(#radial-pink)" filter="url(#glow-ambient)" />
+  <circle cx="340" cy="200" r="170" fill="url(#radial-pink)" filter="url(#glow-soft)" opacity="0.75" />
+
+  <!-- 3. Halo central bas : Profondeur Mint #2DD4BF -->
+  <circle cx="960" cy="780" r="460" fill="url(#radial-mint)" filter="url(#glow-ambient)" opacity="0.45" />
+  <circle cx="1020" cy="650" r="220" fill="url(#radial-sky)" filter="url(#glow-ambient)" opacity="0.35" />
+
+  <!-- Éléments UI graphiques vectoriels (Design System, Figma, Code) -->
+
+  <!-- Card UI Flottante 1 (Droite) : Mockup navigateur / interface Figma -->
+  <g transform="translate(1320, 160) rotate(-4)" filter="url(#glass-shadow)">
+    <!-- Fond de carte avec bordure lumineuse -->
+    <rect width="480" height="310" rx="14" fill="url(#card-glass-1)" stroke="#2DD4BF" stroke-opacity="0.3" stroke-width="1.5" />
+    
+    <!-- Barre de titre fenêtre UI -->
+    <rect width="480" height="38" rx="14" fill="#00252e" fill-opacity="0.8" />
+    <circle cx="24" cy="19" r="4.5" fill="#ffb1ef" fill-opacity="0.85" />
+    <circle cx="40" cy="19" r="4.5" fill="#38BDF8" fill-opacity="0.75" />
+    <circle cx="56" cy="19" r="4.5" fill="#2DD4BF" fill-opacity="0.75" />
+    <rect x="80" y="11" width="180" height="15" rx="4" fill="#2DD4BF" fill-opacity="0.12" />
+
+    <!-- Wireframe éléments de design -->
+    <!-- Sidebar -->
+    <rect x="18" y="52" width="90" height="238" rx="8" fill="#001d24" fill-opacity="0.7" stroke="#2DD4BF" stroke-opacity="0.12" />
+    <rect x="28" y="66" width="55" height="8" rx="3" fill="#ffb1ef" fill-opacity="0.6" />
+    <rect x="28" y="86" width="70" height="6" rx="2" fill="#2DD4BF" fill-opacity="0.4" />
+    <rect x="28" y="102" width="60" height="6" rx="2" fill="#38BDF8" fill-opacity="0.3" />
+    <rect x="28" y="118" width="65" height="6" rx="2" fill="#2DD4BF" fill-opacity="0.25" />
+
+    <!-- Hero banner wireframe -->
+    <rect x="122" y="52" width="340" height="110" rx="10" fill="#00252e" fill-opacity="0.85" stroke="#2DD4BF" stroke-opacity="0.3" />
+    <rect x="140" y="70" width="160" height="12" rx="4" fill="#2DD4BF" fill-opacity="0.8" />
+    <rect x="140" y="90" width="220" height="7" rx="3" fill="#ffffff" fill-opacity="0.35" />
+    <rect x="140" y="103" width="180" height="7" rx="3" fill="#ffffff" fill-opacity="0.22" />
+    <!-- Bouton CTA wireframe -->
+    <rect x="140" y="124" width="85" height="24" rx="6" fill="#2DD4BF" fill-opacity="0.9" />
+
+    <!-- Bento grid miniatures -->
+    <rect x="122" y="174" width="105" height="116" rx="8" fill="#001d24" fill-opacity="0.7" stroke="#2DD4BF" stroke-opacity="0.2" />
+    <circle cx="148" cy="198" r="10" fill="#ffb1ef" fill-opacity="0.5" />
+    <rect x="136" y="218" width="60" height="6" rx="2" fill="#ffffff" fill-opacity="0.35" />
+
+    <rect x="239" y="174" width="105" height="116" rx="8" fill="#001d24" fill-opacity="0.7" stroke="#38BDF8" stroke-opacity="0.2" />
+    <rect x="253" y="192" width="75" height="8" rx="3" fill="#38BDF8" fill-opacity="0.7" />
+    <rect x="253" y="208" width="60" height="6" rx="2" fill="#ffffff" fill-opacity="0.3" />
+
+    <rect x="356" y="174" width="106" height="116" rx="8" fill="#001d24" fill-opacity="0.7" stroke="#ffb1ef" stroke-opacity="0.2" />
+    <circle cx="382" cy="198" r="10" fill="#2DD4BF" fill-opacity="0.6" />
+    <rect x="370" y="218" width="65" height="6" rx="2" fill="#ffb1ef" fill-opacity="0.6" />
+  </g>
+
+  <!-- Card UI Flottante 2 (Gauche) : Panneau de composants / Code Front-end -->
+  <g transform="translate(100, 360) rotate(5)" filter="url(#glass-shadow)">
+    <rect width="360" height="240" rx="12" fill="url(#card-glass-2)" stroke="#ffb1ef" stroke-opacity="0.28" stroke-width="1.2" />
+    
+    <!-- Code Editor Header -->
+    <rect width="360" height="34" rx="12" fill="#00161c" fill-opacity="0.85" />
+    <circle cx="20" cy="17" r="4" fill="#ffb1ef" fill-opacity="0.8" />
+    <circle cx="33" cy="17" r="4" fill="#38BDF8" fill-opacity="0.8" />
+    <circle cx="46" cy="17" r="4" fill="#2DD4BF" fill-opacity="0.8" />
+    <text x="70" y="21" fill="#2DD4BF" font-family="monospace" font-size="11" opacity="0.85">design-tokens.css</text>
+
+    <!-- Lignes de code symboliques -->
+    <text x="24" y="62" fill="#ffb1ef" font-family="monospace" font-size="11" opacity="0.9">:root {</text>
+    <text x="40" y="82" fill="#2DD4BF" font-family="monospace" font-size="11" opacity="0.85">--color-primary: <tspan fill="#ffffff" opacity="0.9">#2DD4BF</tspan>;</text>
+    <text x="40" y="102" fill="#ffb1ef" font-family="monospace" font-size="11" opacity="0.85">--color-accent: <tspan fill="#ffffff" opacity="0.9">#ffb1ef</tspan>;</text>
+    <text x="40" y="122" fill="#38BDF8" font-family="monospace" font-size="11" opacity="0.9">--color-sky: <tspan fill="#ffffff" opacity="0.9">#38BDF8</tspan>;</text>
+    <text x="40" y="142" fill="#2DD4BF" font-family="monospace" font-size="11" opacity="0.7">--color-bg-deep: <tspan fill="#ffffff" opacity="0.7">#002f39</tspan>;</text>
+    <text x="40" y="162" fill="#38BDF8" font-family="monospace" font-size="11" opacity="0.6">/* Figma &amp; UI System */</text>
+    <text x="24" y="184" fill="#ffb1ef" font-family="monospace" font-size="11" opacity="0.9">}</text>
+
+    <!-- Mini badge d'intégration en bas -->
+    <rect x="24" y="198" width="136" height="22" rx="11" fill="#00252e" stroke="#2DD4BF" stroke-opacity="0.5" />
+    <circle cx="35" cy="209" r="4" fill="#ffb1ef" />
+    <text x="46" y="213" fill="#2DD4BF" font-family="sans-serif" font-size="10" font-weight="600">Figma &amp; Front-End</text>
+  </g>
+
+  <!-- Vecteurs de courbes de Bézier & Poignées (Outil Plume de Designer) -->
+  <g opacity="0.5">
+    <!-- Courbe élégante qui traverse l'arrière-plan -->
+    <path d="M 200,820 C 500,700 800,900 1200,720 C 1500,580 1750,680 1920,600" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="6,8" stroke-opacity="0.35" />
+    <path d="M 100,250 C 450,120 750,320 1150,180 C 1450,80 1700,220 1880,140" fill="none" stroke="#ffb1ef" stroke-width="1.5" stroke-opacity="0.4" />
+
+    <!-- Poignées de Bézier interactives -->
+    <line x1="1150" y1="180" x2="1080" y2="120" stroke="#ffb1ef" stroke-width="1.5" />
+    <line x1="1150" y1="180" x2="1220" y2="240" stroke="#ffb1ef" stroke-width="1.5" />
+    <circle cx="1150" cy="180" r="5" fill="#ffb1ef" />
+    <circle cx="1080" cy="120" r="3.5" fill="#2DD4BF" />
+    <circle cx="1220" cy="240" r="3.5" fill="#2DD4BF" />
+  </g>
+
+  <!-- Particules & Étoiles de design scintillantes -->
+  <!-- Croix de repère d'alignement (Grid Crosses) -->
+  <g stroke="#2DD4BF" stroke-opacity="0.3" stroke-width="1.5">
+    <path d="M 850,140 L 860,140 M 855,135 L 855,145" />
+    <path d="M 1060,280 L 1070,280 M 1065,275 L 1065,285" />
+    <path d="M 520,680 L 530,680 M 525,675 L 525,685" />
+    <path d="M 1480,720 L 1490,720 M 1485,715 L 1485,725" />
+  </g>
+
+  <!-- Étoiles à 4 branches (Sparkles) -->
+  <g fill="#ffb1ef" opacity="0.75">
+    <path d="M 720,190 Q 720,200 730,200 Q 720,200 720,210 Q 720,200 710,200 Q 720,200 720,190 Z" />
+    <path d="M 1240,110 Q 1240,118 1248,118 Q 1240,118 1240,126 Q 1240,118 1232,118 Q 1240,118 1240,110 Z" />
+    <path d="M 1620,530 Q 1620,540 1630,540 Q 1620,540 1620,550 Q 1620,540 1610,540 Q 1620,540 1620,530 Z" />
+  </g>
+
+  <g fill="#2DD4BF" opacity="0.75">
+    <path d="M 380,680 Q 380,690 390,690 Q 380,690 380,700 Q 380,690 370,690 Q 380,690 380,680 Z" />
+    <path d="M 1780,340 Q 1780,350 1790,350 Q 1780,350 1780,360 Q 1780,350 1770,350 Q 1780,350 1780,340 Z" />
+  </g>
+
+  <!-- Dégradé progressif vers le bas pour fondre impeccablement dans la page (#002f39) -->
+  <rect y="680" width="100%" height="280" fill="url(#bottom-fade)" />
+  <defs>
+    <linearGradient id="bottom-fade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#002f39" stop-opacity="0" />
+      <stop offset="65%" stop-color="#002f39" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#002f39" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+</svg>
