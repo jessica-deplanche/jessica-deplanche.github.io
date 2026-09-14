@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // --- 1. Filtrage des projets par catégories ---
   const filterButtons = document.querySelectorAll(".project-filter-btn");
-  const projectCards = document.querySelectorAll(".project-case-card");
+  const projectWrappers = document.querySelectorAll(".project-case-card-wrapper");
 
-  if (filterButtons.length && projectCards.length) {
+  if (filterButtons.length && projectWrappers.length) {
     filterButtons.forEach(btn => {
       btn.addEventListener("click", function () {
         const selectedCategory = this.getAttribute("data-filter");
@@ -102,23 +102,31 @@ document.addEventListener("DOMContentLoaded", function () {
         filterButtons.forEach(b => b.classList.remove("active"));
         this.classList.add("active");
 
-        // Filtrage visuel des cartes
-        projectCards.forEach(card => {
+        // Filtrage des cartes et de leurs colonnes de grille
+        projectWrappers.forEach(wrapper => {
+          const card = wrapper.querySelector(".project-case-card");
+          if (!card) return;
+
           const cardCategories = card.getAttribute("data-category") || "";
           const categoriesList = cardCategories.split(" ");
+          const isMatch = selectedCategory === "all" || categoriesList.includes(selectedCategory);
 
-          if (selectedCategory === "all" || categoriesList.includes(selectedCategory)) {
+          if (isMatch) {
+            wrapper.style.display = "";
             card.style.display = "";
-            setTimeout(() => {
-              card.style.opacity = "1";
-              card.style.transform = "translateY(0)";
-            }, 50);
+            card.style.opacity = "0";
+            card.style.transform = "translateY(10px)";
+            requestAnimationFrame(() => {
+              setTimeout(() => {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+              }, 30);
+            });
           } else {
             card.style.opacity = "0";
-            card.style.transform = "translateY(15px)";
-            setTimeout(() => {
-              card.style.display = "none";
-            }, 250);
+            card.style.transform = "translateY(10px)";
+            wrapper.style.display = "none";
+            card.style.display = "none";
           }
         });
       });
@@ -178,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
         thumb.type = "button";
         thumb.className = `viewer-thumb ${idx === startIndex ? "active" : ""}`;
         thumb.setAttribute("aria-label", `Voir écran ${idx + 1}`);
-        thumb.innerHTML = `<img src="${item.src}" alt="Miniature ${idx + 1}">`;
+        thumb.innerHTML = `<img src="${item.src}" alt="Miniature ${idx + 1}" loading="lazy" decoding="async" width="80" height="50">`;
         thumb.addEventListener("click", () => showSlide(idx));
         viewerThumbs.appendChild(thumb);
       });

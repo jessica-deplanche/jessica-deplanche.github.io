@@ -11,6 +11,12 @@ const PORT = 3000;
 // Serve static assets with automatic .html extension resolution
 app.use(express.static(__dirname, { extensions: ['html'] }));
 
+// Route de téléchargement direct de la bannière LinkedIn au format PNG
+app.get('/download-banniere-linkedin', (req, res) => {
+  const file = path.join(__dirname, 'assets', 'img', 'banniere_linkedin.png');
+  res.download(file, 'banniere-linkedin-jessica-deplanche.png');
+});
+
 // Catch-all route to serve index.html
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));

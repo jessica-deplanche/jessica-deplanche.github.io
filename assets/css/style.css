@@ -848,10 +848,10 @@ background-position: 600px;
 }
 
 .btn-case-primary:hover {
-  background: #ffa826;
-  border-color: #ffa826;
+  background: var(--color-vert);
+  border-color: var(--color-vert);
   color: #00252e!important;
-  box-shadow: 0 4px 16px rgba(255, 177, 239, 0.45);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.45);
   transform: translateY(-2px);
 }
 
