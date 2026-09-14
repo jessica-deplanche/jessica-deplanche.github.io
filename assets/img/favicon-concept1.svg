@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Ombre subtile pour donner du relief -->
+    <filter id="c1-shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="2" stdDeviation="1.5" flood-color="#00141a" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  <!-- Fond squircle sombre #00252e -->
+  <rect x="2" y="2" width="60" height="60" rx="15" ry="15" fill="#00252e" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5"/>
+  <!-- Lettres J et D stylisées, géométriques et très lisibles en 16x16 / 32x32 -->
+  <g filter="url(#c1-shadow)" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Montserrat', 'Inter', sans-serif" font-weight="900" font-size="34" letter-spacing="-1">
+    <!-- J en Rose signature #ffb1ef -->
+    <text x="12" y="45" fill="#ffb1ef">J</text>
+    <!-- D en Vert Menthe #2dd4bf -->
+    <text x="29" y="45" fill="#2dd4bf">D</text>
+  </g>
+  <!-- Petit point lumineux rose/turquoise en haut à droite pour une signature moderne -->
+  <circle cx="51" cy="13" r="2.5" fill="#38bdf8" opacity="0.9"/>
+</svg>
