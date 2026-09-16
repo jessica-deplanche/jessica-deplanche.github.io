@@ -668,28 +668,33 @@ background-position: 600px;
 
 .project-thumb-wrapper {
   position: relative;
-  height: 230px;
+  height: 240px;
   overflow: hidden;
-  background: #014d69;
+  background: #eae3d7;
 }
 
 .project-thumb-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top center;
-  transition: transform 0.5s ease;
+  object-position: center center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .project-case-card:hover .project-thumb-img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .project-thumb-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 37, 46, 0.1) 0%, rgba(0, 37, 46, 0.88) 100%);
+  background: linear-gradient(180deg, rgba(0, 20, 26, 0.0) 50%, rgba(0, 20, 26, 0.22) 100%);
   pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.project-case-card:hover .project-thumb-overlay {
+  background: linear-gradient(180deg, rgba(0, 20, 26, 0.0) 30%, rgba(0, 20, 26, 0.35) 100%);
 }
 
 .project-badges-top {

@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Maquettes UI — Prestige Mon Chasseur Immo",
       subtitle: "Conception Figma pour portail immobilier haut de gamme",
       items: [
+        { src: "assets/img/prestige_pageaccueil.png", caption: "Page d'accueil Desktop — Conception haute fidélité prestige" },
+        { src: "assets/img/prestige_mobile.png", caption: "Version Mobile — Expérience responsive sur smartphone" },
         { src: "assets/img/maquette_prestige/MCI-Prestige-Home.png", caption: "Page d'accueil — Présentation des biens de prestige et recherche ciblée" },
         { src: "assets/img/maquette_prestige/MCI-Prestige-Services.png", caption: "Page Services — Offre d'accompagnement sur-mesure pour acheteurs exigeants" },
         { src: "assets/img/maquette_prestige/MCI-Prestige-partenaire.png", caption: "Page Partenaires — Espace de collaboration et prescripteurs de luxe" },
@@ -22,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Maquettes UI & Tunnel — Recrutement Mon Chasseur Immo",
       subtitle: "Parcours candidat complet & optimisation de la conversion",
       items: [
+        { src: "assets/img/recrut_pageaccueil.png", caption: "Page d'accueil Desktop — Proposition employeur et réassurance" },
+        { src: "assets/img/recrut_mobile.png", caption: "Version Mobile — Tunnel et candidature sur mobile" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-Accueil.png", caption: "Page d'accueil Recrutement — Proposition de valeur employeur & réassurance" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-métier.png", caption: "Découvrir le Métier — Fiche métier immersive et missions au quotidien" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-reseau.png", caption: "Le Réseau — Chiffres clés, maillage territorial et communauté" },
@@ -40,6 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Maquettes UI — Acadimmo (Formation Immobilière)",
       subtitle: "Plateforme éducative professionnelle — Conception ergonomique",
       items: [
+        { src: "assets/img/acadimmo_pageaccueil.png", caption: "Page d'accueil Desktop — Conception plateforme Acadimmo" },
+        { src: "assets/img/acadimmo_mobile.png", caption: "Version Mobile — Consultation mobile responsive" },
         { src: "assets/img/maquette_acadimmo/Ac - Homepage.png", caption: "Page d'accueil Acadimmo — Catalogue de formations et mise en avant des cursus" },
         { src: "assets/img/maquette_acadimmo/Ac - Nos formations (page HUB).png", caption: "Hub Formations — Filtres thématiques par niveau, durée et statut" },
         { src: "assets/img/maquette_acadimmo/Ac - Formation page de detaille.png", caption: "Fiche détaillée de formation — Programme complet, objectifs et inscription" },
@@ -50,6 +56,21 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: "assets/img/maquette_acadimmo/Ac - Qui sommes-nous.png", caption: "Qui sommes-nous — L'organisme, la certification Qualiopi et les valeurs" },
         { src: "assets/img/maquette_acadimmo/Ac - FAQ.png", caption: "Foire Aux Questions — Financement CPF, modalités et accès aux cours" },
         { src: "assets/img/maquette_acadimmo/Ac - Contact.png", caption: "Page Contact — Demande de devis et renseignements pédagogiques" }
+      ]
+    },
+    mci: {
+      title: "Refonte Mon Chasseur Immo",
+      subtitle: "Plateforme nationale de recherche immobilière",
+      items: [
+        { src: "assets/img/monchasseurimmo_pageaccueil.png", caption: "Page d'accueil Desktop — Refonte ergonomique, recherche géolocalisée et réassurance" },
+        { src: "assets/img/monchasseurimmo_mobile.png", caption: "Version Mobile — Expérience fluide optimisée pour smartphone" }
+      ]
+    },
+    playbook: {
+      title: "Playbook Interne Chasseurs — Mon Chasseur Immo",
+      subtitle: "Intranet métier & architecture de l'information pour équipes terrain",
+      items: [
+        { src: "assets/img/playbook.png", caption: "Interface d'accueil du Playbook — Navigation thématique, recherche intégrée et modules métiers" }
       ]
     },
     propre: {
