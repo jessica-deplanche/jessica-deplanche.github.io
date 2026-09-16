@@ -377,7 +377,31 @@ async function runAll() {
     outputPath: 'assets/img/site_playbook.jpg'
   });
 
-  console.log('🎉 Les 5 visuels ont été générés avec succès !');
+  // 6. Propre & Co (Desktop + Mobile)
+  const propreDesktop = ['assets/img/propre_co-accueil.png', 'assets/img/propreco_pageaccueil.png', 'propre_co-accueil.png'].find(p => fs.existsSync(p));
+  const propreMobile = ['assets/img/mobile_propreco.png', 'assets/img/mobile_propreco', 'mobile_propreco.png', 'mobile_propreco'].find(p => fs.existsSync(p));
+
+  if (propreDesktop) {
+    await buildMockupScene({
+      title: 'Propre & Co',
+      subtitle: 'Nettoyage & Rénovation Extérieure & Intérieure',
+      category: 'Website & Identité de Marque',
+      url: 'propre-co.fr',
+      desktopImgPath: propreDesktop,
+      phoneImgPath: propreMobile || null,
+      deskW: 860,
+      deskH: 540,
+      deskX: 95,
+      deskY: 160,
+      phoneW: 220,
+      phoneH: 460,
+      phoneX: 890,
+      phoneY: 240,
+      outputPath: 'assets/img/site_propre_et_co.jpg'
+    });
+  }
+
+  console.log('🎉 Les visuels ont été générés avec succès !');
 }
 
 runAll().catch(err => {

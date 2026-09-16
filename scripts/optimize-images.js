@@ -44,6 +44,13 @@ async function processImages() {
       ]
     },
     {
+      source: 'site_propre_et_co.jpg',
+      variants: [
+        { suffix: '-400w.jpg', width: 400, quality: 85 },
+        { suffix: '-670w.jpg', width: 670, quality: 85 }
+      ]
+    },
+    {
       source: 'cover_care_in_yoga.png',
       variants: [
         { suffix: '-400w.jpg', width: 400, quality: 85, toJpg: true },

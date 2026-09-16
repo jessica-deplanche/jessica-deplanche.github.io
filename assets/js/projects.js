@@ -10,12 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
     prestige: {
       title: "Maquettes UI — Prestige Mon Chasseur Immo",
       subtitle: "Conception Figma pour portail immobilier haut de gamme",
+      url: "prestige.monchasseurimmo.com",
       items: [
         { src: "assets/img/prestige_pageaccueil.png", caption: "Page d'accueil Desktop — Conception haute fidélité prestige" },
-        { src: "assets/img/prestige_mobile.png", caption: "Version Mobile — Expérience responsive sur smartphone" },
-        { src: "assets/img/maquette_prestige/MCI-Prestige-Home.png", caption: "Page d'accueil — Présentation des biens de prestige et recherche ciblée" },
-        { src: "assets/img/maquette_prestige/MCI-Prestige-Services.png", caption: "Page Services — Offre d'accompagnement sur-mesure pour acheteurs exigeants" },
-        { src: "assets/img/maquette_prestige/MCI-Prestige-partenaire.png", caption: "Page Partenaires — Espace de collaboration et prescripteurs de luxe" },
+        { src: "assets/img/prestige_mobile.png", caption: "Version Mobile — Expérience responsive sur smartphone", type: "mobile" },
+        { src: "assets/img/maquette_prestige/MCI-Prestige-Home.png", caption: "Page d'accueil complète — Biens prestigieux et recherche sur-mesure" },
+        { src: "assets/img/maquette_prestige/MCI-Prestige-Services.png", caption: "Page Services — Offre d'accompagnement dédiée aux acquéreurs exigeants" },
+        { src: "assets/img/maquette_prestige/MCI-Prestige-partenaire.png", caption: "Page Partenaires — Espace de collaboration et prescripteurs de prestige" },
         { src: "assets/img/maquette_prestige/MCI-Prestige-Equipe.png", caption: "Page Équipe — Mise en valeur des experts et conseillers dédiés" },
         { src: "assets/img/maquette_prestige/MCI-Prestige-Chasseur.png", caption: "Fiche Chasseur — Profil détaillé, avis clients et contact direct" }
       ]
@@ -23,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     recrutement: {
       title: "Maquettes UI & Tunnel — Recrutement Mon Chasseur Immo",
       subtitle: "Parcours candidat complet & optimisation de la conversion",
+      url: "recrutement.monchasseurimmo.com",
       items: [
         { src: "assets/img/recrut_pageaccueil.png", caption: "Page d'accueil Desktop — Proposition employeur et réassurance" },
-        { src: "assets/img/recrut_mobile.png", caption: "Version Mobile — Tunnel et candidature sur mobile" },
+        { src: "assets/img/recrut_mobile.png", caption: "Version Mobile — Tunnel et candidature sur mobile", type: "mobile" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-Accueil.png", caption: "Page d'accueil Recrutement — Proposition de valeur employeur & réassurance" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-métier.png", caption: "Découvrir le Métier — Fiche métier immersive et missions au quotidien" },
         { src: "assets/img/maquette_recrutement/MCI_Recrut-reseau.png", caption: "Le Réseau — Chiffres clés, maillage territorial et communauté" },
@@ -43,9 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     acadimmo: {
       title: "Maquettes UI — Acadimmo (Formation Immobilière)",
       subtitle: "Plateforme éducative professionnelle — Conception ergonomique",
+      url: "acadimmo.fr",
       items: [
         { src: "assets/img/acadimmo_pageaccueil.png", caption: "Page d'accueil Desktop — Conception plateforme Acadimmo" },
-        { src: "assets/img/acadimmo_mobile.png", caption: "Version Mobile — Consultation mobile responsive" },
+        { src: "assets/img/acadimmo_mobile.png", caption: "Version Mobile — Consultation mobile responsive", type: "mobile" },
         { src: "assets/img/maquette_acadimmo/Ac - Homepage.png", caption: "Page d'accueil Acadimmo — Catalogue de formations et mise en avant des cursus" },
         { src: "assets/img/maquette_acadimmo/Ac - Nos formations (page HUB).png", caption: "Hub Formations — Filtres thématiques par niveau, durée et statut" },
         { src: "assets/img/maquette_acadimmo/Ac - Formation page de detaille.png", caption: "Fiche détaillée de formation — Programme complet, objectifs et inscription" },
@@ -61,27 +64,34 @@ document.addEventListener("DOMContentLoaded", function () {
     mci: {
       title: "Refonte Mon Chasseur Immo",
       subtitle: "Plateforme nationale de recherche immobilière",
+      url: "monchasseurimmo.com",
       items: [
         { src: "assets/img/monchasseurimmo_pageaccueil.png", caption: "Page d'accueil Desktop — Refonte ergonomique, recherche géolocalisée et réassurance" },
-        { src: "assets/img/monchasseurimmo_mobile.png", caption: "Version Mobile — Expérience fluide optimisée pour smartphone" }
+        { src: "assets/img/monchasseurimmo_mobile.png", caption: "Version Mobile — Expérience fluide optimisée pour smartphone", type: "mobile" }
       ]
     },
     playbook: {
       title: "Playbook Interne Chasseurs — Mon Chasseur Immo",
       subtitle: "Intranet métier & architecture de l'information pour équipes terrain",
+      url: "intranet.monchasseurimmo.com/playbook",
       items: [
         { src: "assets/img/playbook.png", caption: "Interface d'accueil du Playbook — Navigation thématique, recherche intégrée et modules métiers" }
       ]
     },
     propre: {
-      title: "Charte Graphique — Propre & Co",
-      subtitle: "Identité de marque, logotypes, palette et typographies officielles",
+      device: "none", // Mode Print / Papeterie & Identité (sans écran d'ordinateur car déjà dans le mockup)
+      title: "Webdesign & Identité de Marque — Propre & Co",
+      subtitle: "Vitrine web responsive, flyer promotionnel, cartes de visite et charte graphique officielle",
       pdf: "assets/pdf/charte-propre-et-co.pdf",
       items: [
-        { src: "assets/img/chartes/propre-1.png", caption: "Charte Graphique complète — Logo décliné, Gilroy / Quicksand et palette #052844, #005c78, #028391, #e88d67" }
+        { src: "assets/img/site_propre_et_co.jpg", caption: "Mockup Webdesign — Vitrine responsive Propre & Co sur Desktop (Safari) et iPhone" },
+        { src: "assets/img/chartes/propre-1.png", caption: "Charte Graphique officielle — Logo décliné, typographies Gilroy & Quicksand et palette de couleurs" },
+        { src: "assets/img/mockup_propre_flyer.jpg", caption: "Mockup Flyer — Présentation réaliste du flyer A5 Propre & Co en mise en situation" },
+        { src: "assets/img/mockup_propre_cartes.jpg", caption: "Mockup Cartes de Visite — Duo Recto & Verso en mise en situation studio" } 
       ]
     },
     careinyoga: {
+      device: "none", // Mode Print / Charte pure (sans écran d'ordinateur)
       title: "Charte Graphique & Print — Care in Yoga",
       subtitle: "Univers apaisant Vinyasa & Féminin Sacré, papeterie et supports imprimés",
       pdf: "assets/pdf/charte-care-in-yoga.pdf",
@@ -92,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     aiguilles: {
+      device: "none", // Mode Print / Charte pure (sans écran d'ordinateur)
       title: "Charte Graphique & Print — Les P'tites Aiguilles d'Hélène",
       subtitle: "Atelier couture artisanale — Identité visuelle douce et papeterie print",
       pdf: "assets/pdf/charte-les-ptites-aiguilles.pdf",
@@ -101,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ]
     },
     lamarque: {
+      device: "none", // Mode Print / Charte pure (sans écran d'ordinateur)
       title: "Charte Graphique — Lamarque Chivaley",
       subtitle: "Identité visuelle botanique, univers de marque raffiné et déclinaisons",
       pdf: "assets/pdf/charte-lamarque-chivaley.pdf",
@@ -154,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- 2. Visionneuse / Lightbox interactive ---
+  // --- 2. Visionneuse / Lightbox interactive avec écran d'ordinateur défilant ---
   const viewerModal = document.getElementById("projectViewerModal");
   if (!viewerModal) return;
 
@@ -167,7 +179,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPrev = document.getElementById("viewerPrev");
   const btnNext = document.getElementById("viewerNext");
   const btnClose = document.getElementById("viewerClose");
-  const btnPdf = document.getElementById("viewerDownloadPdf");
+
+  // Nouveaux éléments de l'écran interactif
+  const viewerDeviceWrapper = document.getElementById("viewerDeviceWrapper");
+  const viewerScreenViewport = document.getElementById("viewerScreenViewport");
+  const viewerUrlText = document.getElementById("viewerUrlText");
+  const viewerScrollHint = document.getElementById("viewerScrollHint");
+  const viewerScrollTopBtn = document.getElementById("viewerScrollTopBtn");
 
   let currentGalleryKey = null;
   let currentIndex = 0;
@@ -181,16 +199,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     viewerTitle.textContent = gallery.title;
     viewerSubtitle.textContent = gallery.subtitle;
-
-    // Gérer l'affichage du lien PDF original
-    if (btnPdf) {
-      if (gallery.pdf) {
-        btnPdf.href = gallery.pdf;
-        btnPdf.style.display = "inline-flex";
-      } else {
-        btnPdf.style.display = "none";
-      }
-    }
 
     // Masquer les boutons suivant/précédent si un seul élément
     const hasMultiple = gallery.items.length > 1;
@@ -229,15 +237,56 @@ document.addEventListener("DOMContentLoaded", function () {
     currentIndex = index;
     const currentItem = gallery.items[currentIndex];
 
-    // Transition fluide
+    // Réinitialiser la position de scroll tout en haut de l'écran
+    if (viewerScreenViewport) {
+      viewerScreenViewport.scrollTop = 0;
+    }
+
+    // Déterminer le mode d'affichage (Ordinateur, Mobile ou Print/Charte sans appareil)
+    const hasDevice = gallery.device !== "none";
+    const isMobile = hasDevice && (currentItem.type === "mobile" || (currentItem.src && currentItem.src.includes("mobile")));
+    const isDesktop = hasDevice && !isMobile;
+    const isPrint = !hasDevice;
+
+    if (viewerDeviceWrapper) {
+      viewerDeviceWrapper.classList.toggle("is-mobile", isMobile);
+      viewerDeviceWrapper.classList.toggle("is-desktop", isDesktop);
+      viewerDeviceWrapper.classList.toggle("is-print", isPrint);
+    }
+
+    // Mettre à jour l'URL dans la barre Safari
+    if (viewerUrlText) {
+      viewerUrlText.textContent = gallery.url || "monchasseurimmo.com";
+    }
+
+    // Réinitialiser les états d'indication de défilement
+    if (viewerScrollHint) {
+      viewerScrollHint.classList.remove("scrolled");
+      viewerScrollHint.style.display = "none";
+    }
+    if (viewerScrollTopBtn) {
+      viewerScrollTopBtn.classList.remove("visible");
+    }
+
+    // Transition fluide de l'image
     viewerMainImg.style.opacity = "0";
     setTimeout(() => {
+      viewerMainImg.onload = function () {
+        viewerMainImg.style.opacity = "1";
+        // Vérifier si l'image est plus haute que la fenêtre de visualisation (uniquement en mode écran)
+        if (hasDevice && viewerScreenViewport && viewerScrollHint) {
+          setTimeout(() => {
+            const canScroll = viewerScreenViewport.scrollHeight > viewerScreenViewport.clientHeight + 25;
+            viewerScrollHint.style.display = canScroll ? "inline-flex" : "none";
+          }, 60);
+        }
+      };
+
       viewerMainImg.src = currentItem.src;
       viewerMainImg.alt = currentItem.caption;
       viewerCaption.textContent = currentItem.caption;
       viewerCounter.textContent = `${currentIndex + 1} / ${gallery.items.length}`;
-      viewerMainImg.style.opacity = "1";
-    }, 150);
+    }, 120);
 
     // Mettre à jour l'état actif des miniatures
     const allThumbs = viewerThumbs.querySelectorAll(".viewer-thumb");
@@ -246,6 +295,33 @@ document.addEventListener("DOMContentLoaded", function () {
       if (idx === currentIndex) {
         thumb.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
       }
+    });
+  }
+
+  // Écouter le défilement dans l'écran de l'ordinateur
+  if (viewerScreenViewport) {
+    viewerScreenViewport.addEventListener("scroll", function () {
+      if (viewerScrollHint) {
+        if (this.scrollTop > 30) {
+          viewerScrollHint.classList.add("scrolled");
+        } else {
+          viewerScrollHint.classList.remove("scrolled");
+        }
+      }
+      if (viewerScrollTopBtn) {
+        if (this.scrollTop > 160) {
+          viewerScrollTopBtn.classList.add("visible");
+        } else {
+          viewerScrollTopBtn.classList.remove("visible");
+        }
+      }
+    }, { passive: true });
+  }
+
+  // Clic sur le bouton "Remonter en haut" de la barre de navigation
+  if (viewerScrollTopBtn && viewerScreenViewport) {
+    viewerScrollTopBtn.addEventListener("click", function () {
+      viewerScreenViewport.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 

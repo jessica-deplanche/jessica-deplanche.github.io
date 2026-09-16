@@ -1,4 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // 1. Réduction de hauteur et changement de couleur de fond du header au scroll
+    const headerNav = document.querySelector(".site-header-nav");
+    if (headerNav) {
+      const handleHeaderScroll = () => {
+        if (window.scrollY > 30) {
+          headerNav.classList.add("is-scrolled");
+        } else {
+          headerNav.classList.remove("is-scrolled");
+        }
+      };
+
+      window.addEventListener("scroll", handleHeaderScroll, { passive: true });
+      handleHeaderScroll(); // Appel initial au chargement
+    }
+
+    // 2. Animation dynamique de survol des liens du menu desktop
     const menuItems = document.querySelectorAll(".menu-item");
     const hoverBar = document.querySelector(".hover-animation");
   
@@ -23,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
-    // Bouton flottant Retour en haut
+    // 3. Bouton flottant Retour en haut
     const backToTopBtn = document.getElementById("backToTopBtn");
     if (backToTopBtn) {
       window.addEventListener("scroll", function () {

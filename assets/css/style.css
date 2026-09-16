@@ -710,25 +710,31 @@ background-position: 600px;
 }
 
 .project-client-badge {
-  background: rgba(0, 37, 46, 0.88);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(45, 212, 191, 0.5);
+  background: rgba(0, 24, 34, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: #F8FAFC;
   font-size: 12px;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 4px 11px;
   border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .project-role-badge {
-  background: rgba(255, 177, 239, 0.22);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 177, 239, 0.55);
-  color: var(--color-rose);
-  font-size: 11px;
-  font-weight: 600;
-  padding: 4px 10px;
+  background: rgba(0, 28, 38, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(45, 212, 191, 0.6);
+  color: var(--color-vert);
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 11px;
   border-radius: 20px;
+  letter-spacing: 0.25px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .project-quick-screens-btn {
@@ -1031,21 +1037,323 @@ background-position: 600px;
 .viewer-body {
   position: relative;
   flex: 1;
-  background: #001e25;
+  background: #00171d;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: 16px 60px;
+  padding: 16px 65px;
 }
 
-.viewer-main-img {
+/* Conteneur de l'appareil (Desktop ou Mobile) */
+.viewer-device-wrapper {
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: max-width 0.3s ease;
+}
+
+.viewer-device-wrapper.is-desktop {
+  max-width: 980px;
+}
+
+.viewer-device-wrapper.is-mobile {
+  max-width: 340px;
+}
+
+/* Châssis de l'ordinateur portable / fenêtre macOS */
+.viewer-computer-frame {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 10px);
+  background: #ffffff;
+  border-radius: 12px 12px 6px 6px;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  transition: border-radius 0.3s ease, border-width 0.3s ease;
+}
+
+/* Barre de navigation supérieure macOS Safari */
+.viewer-computer-bar {
+  height: 38px;
+  background: #0f1c29;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 12px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.viewer-mac-dots {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.viewer-mac-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red {
+  background: #ff5f56;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dot-yellow {
+  background: #ffbd2e;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dot-green {
+  background: #27c93f;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.viewer-browser-nav {
+  display: flex;
+  gap: 8px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 11px;
+}
+
+.viewer-url-bar {
+  flex: 1;
+  max-width: 440px;
+  margin: 0 auto;
+  background: #08111a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  color: #94a3b8;
+  font-size: 11.5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: 0.1px;
+}
+
+.viewer-bar-actions {
+  display: flex;
+  align-items: center;
+}
+
+.viewer-bar-scrolltop-btn {
+  background: rgba(45, 212, 191, 0.15);
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  color: var(--color-vert);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.viewer-bar-scrolltop-btn.visible {
+  display: inline-flex;
+}
+
+.viewer-bar-scrolltop-btn:hover {
+  background: var(--color-vert);
+  color: #00252e;
+}
+
+/* Écran intérieur avec défilement vertical interactif */
+.viewer-screen-viewport {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: #f8fafc;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar discrète et élégante */
+.viewer-screen-viewport::-webkit-scrollbar {
+  width: 7px;
+}
+
+.viewer-screen-viewport::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.viewer-screen-viewport::-webkit-scrollbar-thumb {
+  background: rgba(0, 37, 46, 0.3);
+  border-radius: 4px;
+}
+
+.viewer-screen-viewport::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 37, 46, 0.6);
+}
+
+/* Image de la maquette qui s'étend sur toute la hauteur */
+.viewer-screen-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.2s ease;
+}
+
+/* Bulle interactive invitant au défilement */
+.viewer-scroll-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(6, 24, 36, 0.90);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(45, 212, 191, 0.45);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  z-index: 15;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.viewer-scroll-hint.scrolled {
+  opacity: 0;
+  transform: translateX(-50%) translateY(8px);
+}
+
+.bounce-indicator {
+  animation: bounceDown 1.6s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+/* Base / Encoche d'ordinateur portable Apple MacBook */
+.viewer-computer-chin {
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(180deg, #2b3948 0%, #172330 100%);
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: none;
+}
+
+.viewer-chin-notch {
+  width: 50px;
+  height: 3px;
+  background: #0a131c;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Mode Smartphone / Mobile Frame */
+.viewer-device-wrapper.is-mobile .viewer-computer-frame {
+  border-radius: 34px;
+  border: 7px solid #1e293b;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  background: #000;
+}
+
+.viewer-device-wrapper.is-mobile .viewer-computer-bar {
+  display: none;
+}
+
+.viewer-device-wrapper.is-mobile .viewer-phone-notch {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  background: #000;
+  flex-shrink: 0;
+}
+
+.viewer-dynamic-island {
+  width: 74px;
+  height: 16px;
+  background: #111;
+  border-radius: 10px;
+  border: 1px solid #222;
+}
+
+.viewer-device-wrapper.is-mobile .viewer-computer-chin {
+  display: none;
+}
+
+.viewer-device-wrapper.is-mobile .viewer-screen-viewport {
+  border-radius: 0 0 26px 26px;
+}
+
+/* Mode Print & Identité Visuelle (Care in Yoga, Les P'tites Aiguilles, Lamarque Chivaley) */
+.viewer-device-wrapper.is-print {
+  max-width: 1040px;
+  height: 100%;
+}
+
+.viewer-device-wrapper.is-print .viewer-computer-frame {
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+  max-height: 100%;
+}
+
+.viewer-device-wrapper.is-print .viewer-computer-bar,
+.viewer-device-wrapper.is-print .viewer-phone-notch,
+.viewer-device-wrapper.is-print .viewer-computer-chin,
+.viewer-device-wrapper.is-print .viewer-scroll-hint {
+  display: none !important;
+}
+
+.viewer-device-wrapper.is-print .viewer-screen-viewport {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  padding: 8px;
+}
+
+.viewer-device-wrapper.is-print .viewer-screen-img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  transition: opacity 0.2s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .viewer-nav-btn {
@@ -1142,17 +1450,39 @@ background-position: 600px;
 @media (max-width: 768px) {
   .viewer-dialog {
     height: 96vh;
+    border-radius: 12px;
   }
   .viewer-body {
-    padding: 10px 40px;
+    padding: 8px 38px;
   }
   .viewer-nav-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+  }
+  .viewer-prev-btn {
+    left: 3px;
+  }
+  .viewer-next-btn {
+    right: 3px;
+  }
+  .viewer-computer-bar {
+    height: 32px;
+    padding: 0 8px;
+    gap: 8px;
+  }
+  .viewer-url-bar {
+    font-size: 10.5px;
+    height: 22px;
+    max-width: 200px;
+  }
+  .viewer-scroll-hint {
+    font-size: 11px;
+    padding: 5px 12px;
+    bottom: 10px;
   }
   .viewer-header {
-    padding: 12px 16px;
+    padding: 10px 14px;
   }
   .viewer-header-info h4 {
     font-size: 15px;
@@ -1625,13 +1955,26 @@ padding: 10px;
   position: sticky;
   top: 0;
   z-index: 1040;
-  background: rgba(6, 24, 36, 0.78);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(6, 24, 36, 0.70);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: background 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  padding: 16px 0;
+}
+
+/* État rétracté et discret au scroll */
+.site-header-nav.is-scrolled {
+  background: rgba(4, 15, 24, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
-  transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
-  padding: 12px 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  padding: 6px 0;
 }
 
 .site-brand {
@@ -1644,7 +1987,11 @@ padding: 10px;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, font-size 0.3s ease;
+}
+
+.site-header-nav.is-scrolled .site-brand {
+  font-size: 18.5px !important;
 }
 
 .site-brand .brand-first {
@@ -1671,19 +2018,30 @@ padding: 10px;
     margin-top: 12px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: margin-top 0.3s ease;
+  }
+
+  .site-header-nav.is-scrolled .navbar-collapse {
+    margin-top: 8px;
+    background: rgba(4, 15, 24, 0.98);
   }
 }
 
 /* Offset smooth scroll pour les ancres avec barre fixe */
 section[id],
 header[id] {
-  scroll-margin-top: 85px;
+  scroll-margin-top: 75px;
 }
 
 /* Menu */
 .navbar {
 background: transparent;
 padding: 5px 0;
+transition: padding 0.3s ease;
+}
+
+.site-header-nav.is-scrolled .navbar {
+  padding: 0;
 }
 
 .navbar-nav .nav-link {
@@ -1692,7 +2050,12 @@ font-weight: 500;
 color: var(--color-blanc);
 padding: 8px 18px!important;
 position: relative;
-transition: color 0.3s ease;
+transition: color 0.3s ease, padding 0.3s ease, font-size 0.3s ease;
+}
+
+.site-header-nav.is-scrolled .navbar-nav .nav-link {
+  padding: 5px 14px !important;
+  font-size: 15.5px;
 }
 
 /* Au survol, on change la couleur du texte */

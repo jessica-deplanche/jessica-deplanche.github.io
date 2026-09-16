@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "node server.js",
     "start": "node server.js",
-    "build": "node scripts/generate-mockup-covers.js && node scripts/optimize-images.js && node scripts/generate-banniere.js && echo 'Static site ready'",
-    "lint": "node --check server.js && node --check scripts/generate-banniere.js && node --check scripts/optimize-images.js && node --check scripts/generate-mockup-covers.js"
+    "build": "node scripts/generate-mockup-covers.js && node scripts/generate-propre-mockups.js && node scripts/optimize-images.js && node scripts/generate-banniere.js && echo 'Static site ready'",
+    "lint": "node --check server.js && node --check scripts/generate-banniere.js && node --check scripts/optimize-images.js && node --check scripts/generate-mockup-covers.js && node --check scripts/generate-propre-mockups.js"
   },
   "dependencies": {
     "express": "^4.21.2",
     "opentype.js": "^2.0.0",
+    "qrcode": "^1.5.4",
     "sharp": "^0.35.4"
   }
 }
